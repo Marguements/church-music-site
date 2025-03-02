@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - SECRET_KEY=your_secure_secret
+      - SITE_PASSWORD=musicpass
+    volumes:
+      - ./data:/app/data
+    restart: always
